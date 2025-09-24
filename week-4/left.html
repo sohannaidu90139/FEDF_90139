@@ -1,0 +1,61 @@
+<html> 
+
+<head>
+    <title>Leftside of page </title>
+</head>
+
+<body bgcolor="skyblue" style="text-align: left;">
+<style>
+  .slideshow-container {
+    max-width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 70px;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    animation: fade 8s infinite;
+    animation-fill-mode: forwards;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 4s; }
+
+@keyframes fade {
+    0%   { opacity: 0; }
+    10%  { opacity: 1; }
+    45%  { opacity: 1; }
+    55%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+</style>
+
+
+<div class="slideshow-container">
+<div class="slide"><img src="laptop.jpeg" alt="Laptops"></div>
+<div class="slide"><img src="pendrive.jpg" alt="Mobiles"></div>
+
+</div>
+
+  <h1>Electronics</h1>
+<h3>
+    <a href="Laptops.html" target="Laptops">Laptops</a><br>
+      <a href="router.html" target="routers">routers</a><br>
+        <a href="pendrive.html" target="pendrives">pendrives</a><br>
+          <a href="mobiles.html" target="mobiles">mobiles</a><br>
+
+          
+
+</h3>
+
+</body>
+</html>
