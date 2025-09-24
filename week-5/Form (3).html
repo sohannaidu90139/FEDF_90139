@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Validation Registration Form</title>
+
+<script>
+function validate()
+ {
+    
+
+    let name = document.getElementById("n").value;
+    let email = document.getElementById("email").value;
+    let pwd = document.getElementById("pwd").value;
+       let number = document.getElementById("ph").value;
+
+    if (!name || !email || !pwd || !number ) 
+        window.alert("Details fill chey"); 
+    else 
+       document.write("Thank you for visiting");
+ 
+       if(email=="hemanth@gmail.com" && pwd=="123")
+       {
+            
+
+       }
+  
+}
+</script>
+</head>
+<body style="background-color: skyblue;">
+    <form onsubmit="validate()">
+        <h1>Registration Form</h1>
+
+        <label>Name:</label>
+        <input type="text" id="n"><br><br>
+
+        
+
+        <label>Email:</label>
+        <input type="text" id="email"><br><br>
+
+          <label>Password:</label>
+        <input type="password" id="pwd"><br><br>
+
+        <label>Phone number:</label>
+        <input type="tel" id="ph" maxlength="10"><br><br>
+       
+       
+
+
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+</html>
