@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather App</title>
+  <style>
+    body {
+      background-color: orange;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    input, button {
+      display: block;
+      width: 200px;
+      margin: 10px auto;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    input { background-color: white; }
+    button { background-color: white; cursor: pointer; }
+    #tempResult {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: white;
+      display: none; /* hide by default */
+      text-align: left;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Weather App</h1>
+  <input type="text" id="cityinput" placeholder="Enter city name" />
+  <button onclick="getWeather()">Get Weather</button>
+  <pre id="tempResult"></pre>
+
+  <script>
+    function getWeather() {
+      const city = document.getElementById("cityinput").value.trim();
+      const resultBox = document.getElementById("tempResult");
+
+      if (!city) { 
+        alert("Enter a city"); 
+        resultBox.style.display = "none"; // hide output if empty
+        return; 
+      }
+
+      const url = `https://wttr.in/${encodeURIComponent(city)}?format=%l:+%t+°C,+Humidity:+%h,+Wind:+%w`;
+
+      fetch(url)
+        .then(r => r.text())
+        .then(text => {
+          resultBox.innerText = text;
+          resultBox.style.display = "inline-block"; // show output
+        })
+        .catch(() => {
+          resultBox.innerText = "City not found";
+          resultBox.style.display = "inline-block";
+        });
+    }
+  </script>
+</body>
+</html>
