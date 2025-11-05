@@ -1,0 +1,282 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #9b59b6;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms, transform 0.3s ease;
+  cursor: pointer;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+  transform: scale(1.05) rotate(5deg);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+  transform: scale(1.05) rotate(-5deg);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-out;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.read-the-docs {
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.read-the-docs:hover {
+  color: #646cff;
+  text-decoration: underline;
+}
+
+/* Enhanced Material-UI component styles */
+.MuiPaper-root {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.MuiPaper-root:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Button enhancements */
+.MuiButton-root {
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.MuiButton-root::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.MuiButton-root:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.MuiButton-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.MuiButton-root:active {
+  transform: translateY(0);
+}
+
+/* TextField enhancements */
+.MuiTextField-root {
+  transition: all 0.3s ease !important;
+}
+
+.MuiTextField-root:hover .MuiOutlinedInput-root {
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.1);
+}
+
+.MuiOutlinedInput-root:focus-within {
+  box-shadow: 0 4px 16px rgba(52, 152, 219, 0.2);
+  transform: scale(1.01);
+}
+
+/* Radio button enhancements */
+.MuiRadio-root {
+  transition: all 0.3s ease !important;
+}
+
+.MuiRadio-root:hover {
+  transform: scale(1.2);
+}
+
+.MuiFormControlLabel-root {
+  transition: all 0.3s ease !important;
+  border-radius: 8px;
+  padding: 4px 8px;
+  margin: 4px !important;
+}
+
+.MuiFormControlLabel-root:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+  transform: translateX(5px);
+}
+
+/* List item enhancements */
+.MuiList-root {
+  background-color: transparent !important;
+}
+
+.MuiListItem-root {
+  transition: all 0.3s ease !important;
+  border-radius: 8px;
+  margin-bottom: 8px !important;
+  background-color: transparent !important;
+}
+
+.MuiContainer-root .MuiBox-root .MuiListItem-root .MuiListItemText-primary {
+  color: #ffffff !important;
+}
+
+.MuiContainer-root .MuiBox-root .MuiListItem-root .MuiListItemText-secondary {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.MuiListItem-root:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.MuiContainer-root .MuiBox-root .MuiDivider-root {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Alert enhancements */
+.MuiAlert-root {
+  transition: all 0.3s ease !important;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.MuiAlert-root:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography enhancements */
+.MuiTypography-h4 {
+  color: #2c3e50 !important;
+  font-weight: 700 !important;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.MuiTypography-h4:hover {
+  transform: scale(1.05);
+  color: #3498db !important;
+}
+
+/* Typography outside Paper - needs to be white on purple background */
+.MuiContainer-root .MuiBox-root .MuiTypography-h5 {
+  transition: all 0.3s ease;
+  color: #ffffff !important;
+}
+
+.MuiContainer-root .MuiBox-root .MuiTypography-h5:hover {
+  color: #f0f0f0 !important;
+  transform: translateX(5px);
+}
+
+.MuiContainer-root .MuiBox-root .MuiTypography-root {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Star icon enhancements */
+.MuiSvgIcon-root {
+  transition: all 0.3s ease !important;
+}
+
+.MuiSvgIcon-root:hover {
+  transform: scale(1.2) rotate(15deg);
+  filter: drop-shadow(0 2px 8px rgba(255, 193, 7, 0.5));
+}
+
+/* Container enhancements */
+.MuiContainer-root {
+  animation: fadeIn 0.8s ease-out;
+  background-color: transparent !important;
+}
+
+/* Box component - transparent background */
+.MuiBox-root {
+  background-color: transparent !important;
+}
+
+/* Disable scrolling and ensure purple background */
+html {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #9b59b6;
+}
+
+body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #9b59b6;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
